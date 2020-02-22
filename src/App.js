@@ -1,13 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './store/store';
 import {
 	BrowserRouter as Router,
 	Route,
 	Switch,
 	Link
 } from 'react-router-dom';
-import Machines from './Machines';
+import Machines from './components/machine/Machines';
+import MachineDetails from './components/machineDetails/MachineDetails';
 import './App.css';
 
 function App () {
@@ -25,8 +26,11 @@ function App () {
 					</nav>
 
 					<Switch>
-						<Route path='/machines'>
+						<Route exact path='/machines'>
 							<Machines />
+						</Route>
+						<Route exact path='/machines/:id'>
+							<MachineDetails />
 						</Route>
 					</Switch>
 				</div>
