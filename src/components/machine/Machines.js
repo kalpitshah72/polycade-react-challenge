@@ -52,7 +52,7 @@ class Machines extends React.Component {
 									<div className="d-flex align-self-center">
 										<div className="align-self-center m-r-10">Machine Health:</div>
 										<div className="p-relative">
-											<span data-testid="machineHealth" className="health">{machine.health}</span>
+											<span data-testid="machineHealth" className="health">{(machine.health > 0 ? machine.health : 0)}</span>
 											<Icon
 												className="antd-icon"
 												type="heart"

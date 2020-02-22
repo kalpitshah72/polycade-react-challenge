@@ -49,7 +49,7 @@ const MachineDetails = ({ machine, getMachineById, ...props }) => {
 			<div className="d-flex align-self-center">
 				<div className="align-self-center m-r-10">Machine Health:</div>
 				<div className="p-relative">
-					<span className="health" data-testid="machineHealth">{machine.health}</span>
+					<span className="health" data-testid="machineHealth">{(machine.health > 0 ? machine.health : 0)}</span>
 					<Icon
 						className="antd-icon"
 						type="heart"
